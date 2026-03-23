@@ -17,11 +17,11 @@ class InterfaceMiracleSort(ctk.CTk):
         self.sorting = False #indica se o miracle sort está a correr
         self.posição_verificação = 0 #guarda a posição atual da verificação
         self.check_loop = None
-        self.evento_ativo = False # NOVO: Pausa a animação de texto durante eventos
+        self.evento_ativo = False #pausa a animação de texto durante eventos
         
-        #interface - Array
+        #interface array
         self.array_frame = ctk.CTkFrame(self, fg_color="transparent")
-        self.array_frame.pack(pady=(15, 5)) # 15 margem no topo, 5 na base
+        self.array_frame.pack(pady=(15, 5))
         self.lista = [] 
         
         for _ in range(5):
@@ -29,12 +29,12 @@ class InterfaceMiracleSort(ctk.CTk):
             lbl.pack(side="left", padx=5)
             self.lista.append(lbl)
         
-        # Interface - Status e Botões
+        #interface status e botões
         self.texto_estado = ctk.CTkLabel(self, text="Gere uma lista para começar.", font=ctk.CTkFont(size=14))
-        self.texto_estado.pack(pady=15) # Margem igual em cima e em baixo (15)
+        self.texto_estado.pack(pady=15)
         
         self.bt_GerarLista = ctk.CTkButton(self, text="Gerar Lista (5 números)", command=self.generate_array, width=300)
-        self.bt_GerarLista.pack(pady=(5, 5)) # 5 margem no topo, 5 na base
+        self.bt_GerarLista.pack(pady=(5, 5))
         
         self.btn_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.btn_frame.pack(pady=5)
